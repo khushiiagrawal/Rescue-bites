@@ -1,0 +1,16 @@
+body{
+    background-color: red;
+}
+.head{
+    text-align: center;
+    color: red;
+    background-color: black;
+}
+#input{
+    text-align: center;
+}
+.button{
+    display: flex;
+     justify-content: center;
+     align-items: center;
+}
