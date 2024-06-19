@@ -3,24 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food Donati</title>
+    <title>Food Donation</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="search-form">
-        <input type="text" id="search-input" placeholder="Search by restaurant name" onkeyup="searchTasks()">
+        <select id="search-criteria">
+            <option value="restaurant-name">Restaurant Name</option>
+            <option value="address">Location</option>
+            <option value="food-amount">Amount of Food</option>
+        </select>
+        <input type="text" id="search-input" placeholder="Search" onkeyup="searchTasks()">
     </div>
     
     <div class="task-form">
-        <input type="number" id="food-amount" placeholder="Amount of food in kgs">
-        <input type="text" id="restaurant-name" placeholder="Name of restaurant">
-        <input type="tel" id="phone-number" placeholder="Phone number">
-        <input type="text" id="address" placeholder="Address">
+        <div class="form">
+            <input type="number" id="food-amount" placeholder="Amount of food in kgs">
+            <input type="text" id="restaurant-name" placeholder="Name of restaurant">
+        </div>
+        <div class="form">
+            <input type="tel" id="phone-number" placeholder="Phone number">
+            <input type="text" id="address" placeholder="Address">
+        </div>
         <button onclick="addTask()">Add Food</button>
     </div>
-
- 
+    
     <ul id="task-list"></ul>
+    
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
     <script src="app.js"></script>
