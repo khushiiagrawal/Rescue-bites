@@ -1,59 +1,63 @@
+/* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #f0f0f0;
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: #fff;
 }
 
-.task-form {
+/* Form Styles */
+.task-form, .search-form {
     margin-top: 20px;
     padding: 20px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.search-form {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    width: 300px;
+.task-form:hover, .search-form:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .task-form input[type="number"],
 .task-form input[type="text"],
 .task-form input[type="tel"],
 .search-form input[type="text"] {
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 1px solid #555;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    background-color: #fff;
+    color: #000;
 }
 
-.task-form button {
-    padding: 10px;
+.task-form button, .search-form button {
+    padding: 12px;
     font-size: 16px;
-    background-color: #4CAF50;
+    background: linear-gradient(to right, #4CAF50, #45a049);
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+    transition: background 0.3s;
 }
 
-.task-form button:hover {
-    background-color: #45a049;
+.task-form button:hover, .search-form button:hover {
+    background: linear-gradient(to right, #45a049, #4CAF50);
 }
 
+/* Task List Styles */
 #task-list {
     list-style-type: none;
     padding: 0;
@@ -64,13 +68,15 @@ body {
     margin-top: 20px;
 }
 
+/* Task Item Styles */
 .task-item {
-    width: 1200px;
-    background-color: white;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #2e2e2e;
     padding: 20px;
     margin-bottom: 10px;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,30 +86,45 @@ body {
 
 .task-item:hover {
     transform: scale(1.02);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 .task-content h3 {
     margin: 0;
-    font-size: 18px;
+    font-size: 20px;
+    color: #e0e0e0;
 }
 
 .task-content p {
     margin: 5px 0;
     font-size: 16px;
+    color: #ccc;
 }
 
+/* Button Styles */
 .task-item button {
-    padding: 8px 12px;
-    font-size: 14px;
+    padding: 10px 15px;
+    font-size: 16px;
     background-color: #f44336;
     color: white;
     border: none;
     cursor: pointer;
     border-radius: 5px;
     margin-top: 10px;
+    transition: background 0.3s;
 }
 
 .task-item button:hover {
     background-color: #cc0000;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .task-form, .search-form {
+        width: 90%;
+    }
+
+    .task-item {
+        width: 95%;
+    }
 }
