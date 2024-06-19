@@ -1,4 +1,42 @@
 
+.chat{
+    text-align: center;
+    border-radius: 5px;
+}
+.click {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.click:hover {
+    transform: scale(1.1); /* Increase size on hover */
+}
+
+.click img {
+    max-width: 100%; /* Ensure the image doesn't exceed the container */
+    border-radius: 12px;
+}
+
+.click h3 {
+    margin-top: 10px; /* Add some spacing between the image and the heading */
+}
+
+h2{
+    text-align: center;
+}
+.navbar-nav {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+}
+.navbar-brand {
+    margin-left: 1rem; /* Adjust this value as needed for more/less space */
+}
+.navbar-collapse {
+    margin-right: 1rem; /* Adjust this value as needed for more/less space */
+}
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -141,4 +179,18 @@ body {
     .task-item {
         width: 95%;
     }
+}
+.foot
+{
+    background-color: white;
+    color: black;
+}
+h2{
+    text-align: center;
+}
+.heading{
+    background-color: #000;
+    width: 300px;
+    height: 50px;
+    border-radius: 10px;
 }
