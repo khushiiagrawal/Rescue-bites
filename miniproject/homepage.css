@@ -77,8 +77,14 @@ h2{
 
 .display{
     display: flex;
+    flex-direction: row;
     justify-content: center;
+    transition: transform 0.3s ease-in-out;
     
+}
+
+.display:hover {
+    transform: scale(1.01); /* Increase size on hover */
 }
 .col-lg-6 wow fadeInUp{
     display: flex;
